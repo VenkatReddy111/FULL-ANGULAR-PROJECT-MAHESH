@@ -1,0 +1,25 @@
+
+<div class="container" style="padding-top: 25px;">
+    <h1 style="color:rgb(197, 41, 41);text-align: center;"><i>Table of Content</i></h1>
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>GENDER</th>
+            <th>DATE OF BIRTH</th>
+        </tr>
+    </thead>
+  <tbody>
+      <tr *ngFor="let employee of employees;trackBy:trackbyemployeeId">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name|venkat:employee.gender}}</td>
+          <td>{{employee.gender|uppercase}}</td>
+          <td>{{employee.dateofBirth|date}}</td>  
+      </tr>
+  </tbody>
+    </table>
+    <button (click)="getEmployees()">click</button>
+
+</div>
+

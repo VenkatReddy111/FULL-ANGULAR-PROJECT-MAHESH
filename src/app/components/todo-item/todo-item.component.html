@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 style="color:rgb(8, 20, 8);text-align: center;font-style: italic;">DYNAMICALLY DELETING THE ITEMS</h1>
+    <ul *ngFor="let item of list">
+        <li>{{item.title}}</li> 
+        <button class="btn btn-danger" (click)=delete(item.id)>delete</button>
+    </ul>
+    
+</div>
+<div class="container ">
+    <h1 style="text-align: center;color:green"><i>TEMPLATE DRIVEN FORMS</i></h1>
+<div class="row">
+    
+  <div class="col-md-4">
+    <form #temp="ngForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label>USERNAME</label>
+       <input class="form-control" placeholder="userNAME" name="username"  type="text" [(ngModel)]="form.username">
+        </div>
+       <div class="form-group">
+        <label>PASSWORD</label>
+    <input class="form-control"  type="password" name="password" [(ngModel)]="form.password" placeholder="PASSWORD">
+        </div>
+    
+        <button class="btn btn-primary" type="submit">submit</button>
+    
+    </form> 
+</div>
+</div>
+<div style="margin-top: 100px;">
+
+</div>
+
+
+
+
